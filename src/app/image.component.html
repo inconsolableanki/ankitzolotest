@@ -1,0 +1,14 @@
+<h1>Get The Locations </h1>
+
+<div class="align-center">
+        
+    <button mat-button color="primary"  (click)="getNearByPropertyData()">
+        Get Near By Data
+    </button>
+        
+
+    <div *ngIf="nearByResultData">
+        Result Data is {{nearByResultData | json}}
+
+    </div>
+</div>

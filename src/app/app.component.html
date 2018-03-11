@@ -1,0 +1,78 @@
+
+Try this code »
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+    <div class="fixed-header">
+
+        <div class="container">
+
+            <nav>
+
+                <a href="#">Home</a>
+
+                <a href="#">About</a>
+
+                <a href="#">Products</a>
+
+                <a href="#">Services</a>
+
+                <a href="#">Contact Us</a>
+                <button mat-button color="accent">SigIn</button>
+                <button mat-button color="accent">SingUp</button>
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <body class="gif">
+                <img class="image" src="./assets/bad-luck.gif" alt="Try Your Luck">
+        </body>
+
+
+
+        <div class="align-center">
+           <label>Data</label>
+            <div>      
+            <button mat-button color="accent" *ngFor="let property of propertyIds" (click)="getPropertyData(property)">       {{property}}
+                </button>
+          </div>
+            <label>Pic Data</label>
+          <div class="pic">
+                <button mat-button color="warn" *ngFor="let property of propertyIds" (click)="getPropertyPic(property)">       {{property}}
+                    </button>
+    
+          </div>
+          
+            <div *ngIf="resultData">
+                Result Data is {{resultData | json}}
+          
+            </div>
+            <app-image></app-image>
+          </div>
+          
+
+    </div>    
+
+    <div class="fixed-footer">
+
+        <div class="container">Copyright &copy; 2018 ZOLO</div>        
+
+    </div>
+
+</body>
+
+</html>
+
